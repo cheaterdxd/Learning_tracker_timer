@@ -26,7 +26,7 @@
                 <CategoryAxis label="Ngày" side="BOTTOM" tickLabelFill="#222020" />
               </xAxis>
               <yAxis>
-                <NumberAxis label="Giờ" side="LEFT" />
+                <NumberAxis label="Phút" side="LEFT" />
               </yAxis>
             </LineChart>
          </children>
@@ -72,7 +72,6 @@
             <Button fx:id="resetBt" mnemonicParsing="false" onAction="#onResetBt" style="-fx-background-radius: 10 10 10 10;" text="Kết thúc" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <children>
-                  <Button fx:id="chooseWorkBt" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onChooseWorkBt" prefHeight="31.0" prefWidth="179.0" style="-fx-background-radius: 10 10 10 10;" text="Chọn nhãn công việc" textAlignment="CENTER" />
                   <Button fx:id="addWorkBt" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onAddWorkBt" prefHeight="31.0" prefWidth="180.0" style="-fx-background-radius: 10 10 10 10;" text="Thêm nhãn công việc" textAlignment="CENTER" />
                   <Button fx:id="viewWorkBt" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onViewWorkBt" prefHeight="31.0" prefWidth="179.0" style="-fx-background-radius: 10 10 10 10;" text="Thống kê thời gian học" textAlignment="CENTER" />
                </children>
