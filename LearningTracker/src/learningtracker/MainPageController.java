@@ -114,7 +114,7 @@ public class MainPageController implements Initializable {
 			String[] split = data.split(",");
 			hoursOfDate += Integer.valueOf(split[0]);
 		    }
-		    this.dataForChart[i] = (hoursOfDate / 36000);
+		    this.dataForChart[i] = (hoursOfDate / 60);
 		    System.out.println(dataForChart[i]);
 
 		} catch (FileNotFoundException ex) {
@@ -147,7 +147,7 @@ public class MainPageController implements Initializable {
 			    hoursOfDate += Integer.valueOf(split[0]);
 			}
 		    }
-		    this.dataForChart[i] = hoursOfDate / 36000;
+		    this.dataForChart[i] = hoursOfDate / 60;
 		    System.out.println(dataForChart[i]);
 
 		} catch (FileNotFoundException ex) {
@@ -265,8 +265,8 @@ public class MainPageController implements Initializable {
 			Thread.sleep(1000);
 			seconds++;
 			second = seconds % 60;
-			minus = seconds / (3600);
-			hours = seconds / (216000);
+			minus = seconds / (60);
+			hours = seconds / (3600);
 			Platform.runLater(() -> {
 			    setDataToWatch(second, minus, hours);
 			});
@@ -323,7 +323,7 @@ public class MainPageController implements Initializable {
 
     @FXML
     void onResetBt(ActionEvent event) {
-	if (this.running == true) {
+	if (this.running == true || seconds >0) {
 	    saveCurrentWork();
 	}
 	resetWatch();
