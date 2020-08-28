@@ -8,7 +8,7 @@ Mình cay cú quá, nên là mình tự code một cái ứng dụng đơn giả
 
 # Hướng dẫn sử dụng
 
-![](C:\Users\Admin\AppData\Roaming\marktext\images\2020-08-28-15-07-59-image.png)
+![](https://github.com/cheaterdxd/Learning_tracker_timer/blob/master/DemoApp.png)
 
 Giao diện khá đơn giản , ở trên là biểu đồ, nó sẽ tự động thể hiện thời gian học của bạn được bao nhiêu. 
 
