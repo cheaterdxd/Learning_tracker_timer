@@ -12,19 +12,15 @@ Mình cay cú quá, nên là mình tự code một cái ứng dụng đơn giả
 
 Giao diện khá đơn giản , ở trên là biểu đồ, nó sẽ tự động thể hiện thời gian học của bạn được bao nhiêu. 
 
-3 nút bắt đầu, dừng, kết thúc thì cách dùng cũng y chang như cái tên của nó nhé.
+2 nút bắt đầu, kết thúc thì cách dùng cũng y chang như cái tên của nó nhé.
 
 Nhưng đặc biệt để bắt đầu thì bạn cần chọn một nhãn công việc, chọn ở list drop xuống bên góc phải. 
 
 Bạn có thể thêm nhãn vào list này bằng cách bấm vào nút "**thêm nhãn công việc**"
 
-
-
 Khi bạn muốn thống kê, tức là nó sẽ hiện lên biểu đồ ấy. 
 
 Bấm nút **Thống kê thời gian học** , nếu trên list kia bạn chọn trống thì nó sẽ tính tổng thời gian của tất cả công việc rồi hiển thị ra. còn nếu bạn chọn công việc cụ thể thì nó chỉ hiển thị cụ thể thời gian của một nhãn công việc. 
-
-
 
 # Lưu ý:
 

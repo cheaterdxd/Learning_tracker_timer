@@ -51,10 +51,16 @@ public class MainPageController implements Initializable {
     public Label workLb = null;
 
     @FXML
-    private Button stopBt;
+    private Label hourLb;
 
     @FXML
-    private Label hourLb;
+    private Label minusLb;
+
+    @FXML
+    private Label secondLb;
+
+    @FXML
+    private Button startBt;
 
     @FXML
     private Button resetBt;
@@ -63,23 +69,11 @@ public class MainPageController implements Initializable {
     private ChoiceBox<String> workChoiceB;
 
     @FXML
-    private Label secondLb;
-
-    @FXML
     private Button viewWorkBt;
-
 
     @FXML
     private Button addWorkBt;
 
-    @FXML
-    private Label minusLb;
-
-    @FXML
-    private Button startBt;
-
-//    NumberAxis xAsis = new NumberAxis(0, 24, 1);
-//    NumberAxis yAsis = new NumberAxis(0, 31, 1);
     double[] dataForChart;
 
     @FXML
@@ -236,6 +230,7 @@ public class MainPageController implements Initializable {
 	});
     }
 
+
     public void setDataToWatch(int second, int minus, int hours) {
 	secondLb.setText(String.format("%02d", second));
 	minusLb.setText(String.format("%02d", minus));
@@ -260,34 +255,26 @@ public class MainPageController implements Initializable {
 	Thread t = new Thread() {
 	    @Override
 	    public void run() {
-		while (running) {
-		    try {
-			Thread.sleep(1000);
-			seconds++;
-			second = seconds % 60;
-			minus = seconds / (60);
-			hours = seconds / (3600);
-			Platform.runLater(() -> {
-			    setDataToWatch(second, minus, hours);
-			});
-		    } catch (InterruptedException ex) {
-			Logger.getLogger(MainPageController.class.getName()).log(Level.SEVERE, null, ex);
+		while (true) {
+		    if (running == true) {
+			System.out.println("i am running");
+			try {
+			    Thread.sleep(1000);
+			    seconds++;
+			    second = seconds % 60;
+			    minus = (seconds / 60) % 60;
+			    hours = seconds / (3600);
+			    Platform.runLater(() -> {
+				setDataToWatch(second, minus, hours);
+			    });
+			} catch (InterruptedException ex) {
+			    Logger.getLogger(MainPageController.class.getName()).log(Level.SEVERE, null, ex);
+			}
 		    }
 		}
 	    }
 	};
 	t.start();
-    }
-
-    @FXML
-    void onStopBt(ActionEvent event) {
-
-	if (stopBt.getText().equals("Dừng")) {
-	    stopBt.setText("Tiếp tục");
-	    this.running = false;
-	} else {
-	    this.running = false;
-	}
     }
 
     public void saveCurrentWork() {
@@ -323,7 +310,7 @@ public class MainPageController implements Initializable {
 
     @FXML
     void onResetBt(ActionEvent event) {
-	if (this.running == true || seconds >0) {
+	if (this.running == true || seconds > 0) {
 	    saveCurrentWork();
 	}
 	resetWatch();

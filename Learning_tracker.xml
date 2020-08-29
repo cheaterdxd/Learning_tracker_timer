@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>D:\learn_myself\trackerLearning\Learning_tracker_timer\LearningTracker\dist\LearningTracker.jar</jar>
-  <outfile>D:\learn_myself\trackerLearning\Learning_tracker_timer\Learning_tracker.exe</outfile>
+  <outfile>D:\learn_myself\trackerLearning\Learning_tracker_timer\Tracker_Learning.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>

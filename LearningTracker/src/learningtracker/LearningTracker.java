@@ -16,15 +16,22 @@ import javafx.stage.Stage;
  * @author Admin
  */
 public class LearningTracker extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
 	Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
-	
+
 	Scene scene = new Scene(root);
 	stage.setTitle("Tracker Your Time");
 	stage.setScene(scene);
 	stage.show();
+    }
+
+    @Override
+    public void stop() {
+	System.out.println("Stage is closing");
+	System.exit(0);
+	// Save file
     }
 
     /**
@@ -33,5 +40,5 @@ public class LearningTracker extends Application {
     public static void main(String[] args) {
 	launch(args);
     }
-    
+
 }

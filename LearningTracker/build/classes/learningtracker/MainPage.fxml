@@ -68,7 +68,6 @@
                </GridPane.margin>
             </Label>
             <Button fx:id="startBt" mnemonicParsing="false" onAction="#onStartBt" style="-fx-background-radius: 10 10 10 10;" text="Bắt đầu" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button fx:id="stopBt" mnemonicParsing="false" onAction="#onStopBt" style="-fx-background-radius: 10 10 10 10;" text="Dừng" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Button fx:id="resetBt" mnemonicParsing="false" onAction="#onResetBt" style="-fx-background-radius: 10 10 10 10;" text="Kết thúc" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <children>
